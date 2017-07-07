@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <!--<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>-->
+    <script>
+      if(!window.IntersectionObserver){
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver";
+        document.querySelector("head").appendChild(s);
+        s.onload = function() {
+          startup()
+        };
+      }
+    </script>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API -->
+
+    <template id="boxTemplate">
+      <div class="sampleBox">
+        <div class="label topLeft"></div>
+        <div class="label topRight"></div>
+        <div class="label bottomLeft"></div>
+        <div class="label bottomRight"></div>
+      </div>
+    </template>
+
+    <main>
+      <div class="contents">
+        <div class="wrapper">
+        </div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
